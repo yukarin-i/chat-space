@@ -16,16 +16,16 @@
 |------|----|-------|
 |image|string||
 |body|text||
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
 
-### groupテーブル
+### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text||
+|name|text||
 ### Association
 - has_many :users, through: :groups_users
 - has_many :messages
@@ -36,8 +36,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
