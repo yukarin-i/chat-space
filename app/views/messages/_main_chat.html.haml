@@ -1,0 +1,38 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group#date_group_id
+        test
+        %ul.main-header__left-box__member-list
+          %p Member : 
+          %li.main-header__left-box__member-list__member
+            ='#'
+    .main-header__edit-btn  
+      =link_to 'edit', '#', class:"edit"
+
+  .message-list
+    .message-list__users
+      .message-list__users__user
+        masa
+      .message-list__users__date
+        2019/11/20(Wed) 17:43:01
+    .message-list__text
+      おはよう
+
+    .message-list__users
+      .message-list__users__user
+        masa
+      .message-list__users__date
+        2019/11/20(Wed) 17:43:01
+    .message-list__text
+      こんにちは  
+
+  .message-form 
+    %form.message-box   
+      .input-box     
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
+    
