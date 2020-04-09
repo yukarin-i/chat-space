@@ -40,12 +40,17 @@
     .group {
       height: 65px;
       color: #ffffff;
+      text-decoration: none;
+
       &__name {
         font-size: 15px;
         margin-bottom: ５px;
+      
+       
       }
       &__name-message {
         font-size: 11px;
+       
        
       }
     }
