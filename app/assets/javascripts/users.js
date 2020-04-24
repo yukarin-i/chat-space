@@ -23,7 +23,7 @@ $(function() {
   
   function addDeleteUser(name,id) {
     let html = `
-      <div class="chat-group-user clearfix" id"${id}">
+      <div class="chat-group-user clearfix" id="${id}">
         <p class="chat-group-user__name">${name}</p>
         <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn"data-user-id="${id}" data-user-name="${name}">削除</div>
       </div>
@@ -32,8 +32,7 @@ $(function() {
   }
 
   function addMember(userId) {
-    let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />
-    `;
+    let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
   }
 
