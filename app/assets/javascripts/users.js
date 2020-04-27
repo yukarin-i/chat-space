@@ -14,7 +14,6 @@ $(function() {
   function addNoUser() {
     let html = `
       <div class="chat-group-user clearfix">
-        <input name='group[user_ids][]' type='hidden' value="${user.id}">
         <p class="chat-group-user__name">ユーザーが見つかりません</p>
       </div>
     `;
@@ -51,9 +50,7 @@ $(function() {
           users.forEach(function(user) {
             addUser(user);
           });
-        } else if (input.length == 0) {
-          return false;
-        } else {
+        }else {
           addNoUser();
         }
       })
