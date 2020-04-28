@@ -3,7 +3,7 @@
 }
 
 .side-bar {
-  height: 100vw;
+  height: 100vh;
   width: 300px;
   background-color: #253141;
   float: left;
@@ -33,9 +33,9 @@
 
 
   .side-groups {
-    height: calc(100vw - 100px);
+    height: calc(100% - 100px);
     background-color: #2f3e51;
-    padding: 20px 20px 0;
+    padding: 20px 20px 0 ;
     overflow: scroll;
     .group {
       height: 65px;  
@@ -59,41 +59,38 @@
 
 
 .chat-main {
-  height: 100vw;
+  height: 100vh;
   width: calc(100vw - 300px);
   background-color: #FFFFFF;
-  float: right;
+  float: left;
   position: relative;
   .main-header {
     height: 100px;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px #eeeeee;
-    overflow: scroll;
+    border-bottom: 1px solid  #eeeeee;
     &__left-box {
       margin-top: 35px;
       &__current-group #date_group_id {
-        
-        .group__name { 
+        h2 {
           font-size: 20px;
           color: #333333
-          
         }
       }
       &__member-list {
         display: flex;
         justify-content: start;
-        padding-top: 15px;
+        padding: 15px 2px;
         p {
           display: flex;
           font-size: 12px;
-          color: #999999 
+          color: #999999
         }
-        &__member %li {
+        &__member li {
           display: flex;
           font-size: 12px;
-          color: #999999 
+          color: #999999
         }
       }
     }
@@ -108,33 +105,40 @@
         font-size: 16px;
         color: #38aef0;
         text-decoration: none;
-
       }
     }
   }
 
   .message-list {
-    height: calc(100vw - 190px);
+    height: calc(100vh - 190px);
     width: calc(100vw - 300px);
     background-color: #fafafa;
     overflow: scroll;
-    padding: 40px;
-    &__users{
-      display: flex;
-      padding: 35px 0 12px 40px;
-      &__user {
+    padding: 46px 40px 0 40px;
+    .message{
+      padding: 0px 0px 40px 0px;
+      .upper-message {
+        &__user-name{
         font-size: 16px;
-        color: #333333;
+        color: #434a54;
+        display: inline-block;
+        font-weight: bold;
+        }
+        &__date {
+          padding-left: 5px;
+          font-size: 12px;
+          color: #999999;
+          display: inline-block;
+        }
       }
-      &__date {
-        font-size: 12px;
-        color: #999999;
+      .lower-message__content{ 
+        padding: 10px 0px 0px 0px;
+        font-size: 14px;
+        color: #434a54;
       }
-    }
-    &__text { 
-      padding: 0 0 46px 40px;
-      font-size: 14px;
-      color: #434a54;
+      .lower-message__image{ 
+        padding: 10px 0px 0px 0px;
+      }
     }
   }
   
@@ -144,36 +148,37 @@
     background-color: #d2d2d2;
     padding: 20px 40px;
     position: fixed;
-    bottom: 0;
-
     .message-box {
       display: flex;
       .new_message {
         display: flex;
         width: 100%;
-        position: relative;
-      
-        .form__mask__image {
-          height: 50px;
+        .form__message{
+          min-width: 90px;
           width: 100%;
-          color: #434a54;
-          border-style: none;
-          padding: 0 40px 0 10px;
-        
-          .icon {
-            position: absolute;
-            top: 15px;
-            right: 185px;
-            cursor: pointer;
-            font-size: 1.3rem;
-          }
-          .hidden {
-              display: none;
-          }
-          
+          padding-left: 10px;
         }
-        
-      
+        .form__mask{
+          position: relative;
+          width: 10px;
+          &__image {
+            height: 50px;
+            width: 100%;
+            color: #434a54;
+            border-style: none;
+            padding: 0 40px 0 10px;
+            .icon {
+              position: absolute;
+              right: 25px;
+              top: 15px;
+              cursor: pointer;
+              font-size: 1.3rem;
+            }
+            .hidden {
+              display: none;
+            }
+          }
+        }
         .form__submit {
           height: 50px;
           width: 100px;
@@ -182,12 +187,8 @@
           background-color: #38aef0;
           color: white;
           cursor: pointer;
-            
+        }
       }
-      .form__message{
-        width: 100%;
-      }
-     }
     }
   }
 }
